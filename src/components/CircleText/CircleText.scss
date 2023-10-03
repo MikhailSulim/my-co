@@ -1,32 +1,18 @@
 @import './../../scss/global.scss';
 
 .text-ring {
-//   --character-width: 3;
-//   --radius: calc((var(--character-width, 1.0) / sin(var(--inner-angle))) * -1ch);
-//   --font-size: 20px;
-//   font-family: monospace;
-//   color: red;
-//   font-size: 1rem;
-//   text-transform: uppercase;
-//   font-size: calc(var(--font-size, 1) * 1rem);
-left: 290px;
-top: 270px;
-position: relative;
-
+  position: relative;
 }
-.text-ring [style*=--char-index] {
-    // font-size: calc(var(--font-size, 2) * 1rem);
-    font-size: 20px;
-    font-weight: 700;
-    color: $mainTextColor;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform:
-    // translate(-50%, -50%)
-    rotate(calc(360deg / var(--total) * var(--char-index)))
+.text-ring [style*='--char-index'] {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: $mainTextColor;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: rotate(calc(360deg / var(--total) * var(--char-index)))
     translateY(calc(var(--radius, 5) * -1ch));
-    animation: rotation 6s infinite linear;
+  animation: rotation 6s infinite linear;
 }
 @keyframes rotation {
   to {

@@ -1,9 +1,8 @@
 import './CircleText.scss';
-import React from 'react';
+
 declare module 'react' {
   interface CSSProperties {
     '--total'?: number;
-    '--inner-angle'?: number;
     '--radius'?: number;
     '--char-index'?: number;
   }
@@ -11,30 +10,22 @@ declare module 'react' {
 
 interface CircleTextProps {
   text: string;
+  className: string;
 }
 
-const CircleText: React.FC<CircleTextProps> = ({ text }) => {
+const CircleText: React.FC<CircleTextProps> = ({ text, className }) => {
   const CHARS: string[] = text.split('');
   const INNER_ANGLE: number = 360 / CHARS.length;
 
   return (
-    <span
-      className="text-ring"
-      style={{
-        '--total': CHARS.length,
-        '--radius': 3 / Math.sin(INNER_ANGLE / (180 / Math.PI))
-      }}
-        >
+    <span className={`text-ring ${className}`}>
       {CHARS.map((char, index) => (
-          <span
+        <span
           key={index}
           style={{
-              '--char-index': index,
-            //   '--inner-angle': INNER_ANGLE,
-            //   '--total': CHARS.length,
-            //   '--radius': 1 / Math.sin(INNER_ANGLE),
-            // transform: `rotate(${index * INNER_ANGLE}deg)`,
-             
+            '--char-index': index,
+            '--total': CHARS.length,
+            '--radius': 2.2 / Math.sin(INNER_ANGLE / (180 / Math.PI)),
           }}
         >
           {char}

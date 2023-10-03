@@ -15,8 +15,7 @@ function Promo() {
 
       <div className="image">
         <div className="image__triangle"></div>
-        {/* <p className='image__text'>watch video * watch video * watch video *</p> */}
-        <CircleText text="Architecture Bureau MY-CO "/>
+        <CircleText className="image__circle" text="Architecture Bureau MY-CO "/>
       </div>
     </section>
   );
