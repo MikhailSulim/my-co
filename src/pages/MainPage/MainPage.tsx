@@ -1,14 +1,17 @@
+import React from 'react';
 import Promo from '../../components/Promo/Promo';
 import RecentProject from '../../components/RecentProject/RecentProject';
+import Ticker from '../../components/Ticker/Ticker';
 import './MainPage.scss';
 
-function MainPage() {
+const MainPage: React.FC = () => {
   return (
-    <main className='main'>
-      <Promo/>
-      <RecentProject/>
+    <main className="main">
+      <Promo />
+      <RecentProject />
+      <Ticker />
     </main>
-  )
-}
+  );
+};
 
-export default MainPage
+export default MainPage;

@@ -3,14 +3,14 @@ import Header from '../components/Header/Header';
 import MainPage from '../pages/MainPage/MainPage';
 import Footer from '../components/Footer/Footer';
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="app">
-      <Header/>
-      <MainPage/>
-      <Footer/>
+      <Header />
+      <MainPage />
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;

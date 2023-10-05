@@ -5,8 +5,9 @@ import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
 import { SLIDES } from '../../utils/constants';
+import React from 'react';
 
-function RecentProject() {
+const RecentProject: React.FC = () => {
   return (
     <section id="current" className="recent-project">
       <h2 className="recent-project__title">
@@ -40,6 +41,6 @@ function RecentProject() {
       {/* </div> */}
     </section>
   );
-}
+};
 
 export default RecentProject;
