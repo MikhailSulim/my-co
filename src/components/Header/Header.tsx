@@ -1,17 +1,31 @@
+import React from 'react';
 import './Header.scss';
+import ArrayIcon from '../Icons/ArrayIcon';
 
-function Header() {
+const Header: React.FC = () => {
   return (
-    <header className='header'>
-        <div className='header__logo'>MY-CO &#11020; Architecture Bureau</div>
-        <nav className='header__nav'>
-            <a href='#current' className='header__link' >Текущий проект</a>
-            <a href='/' className='header__link' >Наши проекты</a>
-            <a href='/' className='header__link' >О нас</a>
-            <a href='/' className='header__link' >Researches</a>
+    <header className="header">
+      <div className="header__content">
+        <div className="header__logo">
+          MY-CO  <ArrayIcon /> Architecture Bureau
+        </div>
+        <nav className="header__nav">
+          <a href="#current" className="header__link">
+            Текущий проект
+          </a>
+          <a href="/" className="header__link">
+            Наши проекты
+          </a>
+          <a href="/" className="header__link">
+            О нас
+          </a>
+          <a href="/" className="header__link">
+            Researches
+          </a>
         </nav>
-        </header>
-  )
-}
+      </div>
+    </header>
+  );
+};
 
-export default Header
+export default Header;

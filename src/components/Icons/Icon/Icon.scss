@@ -1,0 +1,14 @@
+@import './../../../scss/global.scss';
+
+.icon {
+  width: 42px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  // cursor: pointer;
+  & svg {
+    width: inherit;
+    height: inherit;
+    color: inherit;
+  }
+}

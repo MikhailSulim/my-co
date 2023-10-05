@@ -16,7 +16,7 @@ function RecentProject() {
       {/* <div className="recent-project__content"> */}
 
       <Swiper
-        spaceBetween={1100}
+        spaceBetween={30}
         centeredSlides={true}
         autoplay={{
           delay: 15000,
