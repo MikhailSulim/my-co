@@ -16,6 +16,7 @@ const MainPage: React.FC = () => {
       <OurProjects />
       <Ticker text="#POTATO" direction="right" />
       <Researches />
+      <Ticker text="#CUCUMBER" direction="left" />
       <AboutUs />
     </main>
   );
