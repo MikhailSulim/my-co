@@ -3,10 +3,10 @@
 .recent-project {
   @include contentWidth;
   margin: 100px auto;
+  
   &__title {
     @include sectionTitle;
-    color: $titleTextColor;
-    margin: 0 auto 20px;
+    
   }
 }
 
@@ -66,10 +66,10 @@
     font-size: 16px;
     margin: 0;
     line-height: 18px;
-    font-weight: normal;
+    font-weight: 600;
     max-width: 250px;
     background-color: #ffffff8c;
-    color: black;
+    color: $footerColor;
     border-radius: 15px;
     padding: 10px;
     position: absolute;

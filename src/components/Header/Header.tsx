@@ -13,14 +13,14 @@ const Header: React.FC = () => {
           <a href="#current" className="header__link">
             Текущий проект
           </a>
-          <a href="/" className="header__link">
+          <a href="#our-projects" className="header__link">
             Наши проекты
           </a>
-          <a href="/" className="header__link">
-            О нас
-          </a>
-          <a href="/" className="header__link">
+          <a href="#researches" className="header__link">
             Researches
+          </a>
+          <a href="#about" className="header__link">
+            О нас
           </a>
         </nav>
       </div>
