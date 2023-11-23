@@ -11,6 +11,26 @@
     font-size: 22px;
     line-height: 24px;
     font-weight: normal;
-    color: $footerColor;
+    color: $mainTextColor;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .researches {
+    margin: 40px auto;
+
+    &__text {
+      font-size: 18px;
+      line-height: 18px;
+    }
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .researches {
+    &__text {
+      font-size: 14px;
+      line-height: 14px;
+    }
   }
 }

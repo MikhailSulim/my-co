@@ -5,17 +5,15 @@
 // }
 html {
   scroll-behavior: smooth;
-  
+  :target {scroll-margin-top: 100px;}
 }
 
 .app {
-  background-color: $mainColor;
+  background-color: $mainBGColor;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  height: 100vh;
-  // position: sticky;
-  // bottom: 0;
+  // height: 100vh;
 }
 
 main {

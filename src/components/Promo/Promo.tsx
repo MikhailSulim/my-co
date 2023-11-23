@@ -1,7 +1,11 @@
+import React from 'react';
+
 import CircleText from '../CircleText/CircleText';
+import image from './../../images/promo.jpg';
+
 import './Promo.scss';
 
-function Promo() {
+const Promo: React.FC = () => {
   return (
     <section className="promo">
       <p className="promo__logo">MY-CO Architecture bureau</p>
@@ -12,13 +16,15 @@ function Promo() {
           fun.
         </p>
       </div>
+      <img className="promo__image" src={image} alt="" />
+      
 
-      <div className="image">
+      {/* <div className="image">
         <div className="image__triangle"></div>
         <CircleText className="image__circle" text="Architecture Bureau MY-CO "/>
-      </div>
+      </div> */}
     </section>
   );
-}
+};
 
 export default Promo;

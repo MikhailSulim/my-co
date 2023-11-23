@@ -1,10 +1,18 @@
-import './AboutUs.scss';
+import React from 'react';
+
 import studio from './../../images/studio.png';
 import architector from './../../images/architector.png';
 
-import React from 'react';
+import './AboutUs.scss';
 
-const AboutUs: React.FC = () => {
+/**
+ * Блок "О нас"
+ *
+ * @returns {JSX.Element}
+ */
+
+const AboutUs: React.FC = (): JSX.Element => {
+  
   return (
     <section id="about" className="about">
       <h2 className="about__title">О нас</h2>

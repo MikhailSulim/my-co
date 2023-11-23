@@ -13,3 +13,5 @@ export const PROJECTS = [
     { title: 'Пышечная', imgUrl: 'https://static.spaser.pw/petersburg/__what_and_where/other_eat/pyshechnaya/1.jpg', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos id, mollitia eius enim, nisi deleniti labore itaque excepturi repudiandae, magnam quaerat. Ipsam odio, similique nesciunt, minus fugiat veritatis expedita sequi facilis commodi minima quas sit consectetur porro consequuntur neque. Dolor deleniti perferendis saepe molestias cumque!' },
     { title: 'Рюмочная', imgUrl: 'https://i6.photo.2gis.com/images/branch/0/30258560091868932_7738.jpg', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate voluptatibus harum eveniet perferendis quo ad, recusandae vel molestiae. Aspernatur nulla nostrum iusto ea accusamus? Molestias sequi impedit dolorem qui cupiditate?' }
 ];
+
+export const MOBILE_SCREEN_WIDTH: number = 880;

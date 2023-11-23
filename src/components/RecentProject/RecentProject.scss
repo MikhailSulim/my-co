@@ -3,10 +3,9 @@
 .recent-project {
   @include contentWidth;
   margin: 100px auto;
-  
+
   &__title {
     @include sectionTitle;
-    
   }
 }
 
@@ -38,7 +37,7 @@
     text-align: center;
     font-size: 18px;
     // background: #fff;
-    color: red;
+    color: $mainTextColor;
     overflow: hidden;
 
     /* Center slide text vertically */
@@ -58,7 +57,7 @@
     max-width: 1016px;
     max-height: 500px;
     width: 100%;
-    height: 100%;
+    // height: 100%;
     object-fit: cover;
   }
 
@@ -68,13 +67,26 @@
     line-height: 18px;
     font-weight: 600;
     max-width: 250px;
-    background-color: #ffffff8c;
-    color: $footerColor;
+    background-color: $whiteTransparent;
+    color: $mainTextColor;
     border-radius: 15px;
     padding: 10px;
     position: absolute;
     text-align: left;
     z-index: 2;
+
+    &-item {
+      margin: 10px 0;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 8;
+    }
+    &-link {
+      color: $mainTextColor;
+      text-decoration: none;
+      font-weight: 800;
+    }
 
     &_top-left {
       top: 20px;
@@ -91,6 +103,32 @@
     &_bottom-right {
       bottom: 30px;
       right: 60px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .recent-project {
+    margin: 40px auto;
+  }
+
+  .swiper {
+    --swiper-pagination-bullet-size: 12px;
+    --swiper-pagination-bullet-horizontal-gap: 4px;
+
+    &__slide img {
+      max-height: 330px;
+    }
+
+    &__text {
+      font-size: 12px;
+      line-height: 12px;
+      max-width: 200px;
+      padding: 5px;
+
+      &-item {
+        margin: 5px 0;
+      }
     }
   }
 }

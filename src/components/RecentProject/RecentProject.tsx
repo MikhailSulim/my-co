@@ -11,10 +11,9 @@ const RecentProject: React.FC = () => {
   return (
     <section id="current" className="recent-project">
       <h2 className="recent-project__title">
-        Текущий <br />
-        проект
+        Свежие <br />
+        новости
       </h2>
-      {/* <div className="recent-project__content"> */}
 
       <Swiper
         spaceBetween={30}
@@ -30,10 +29,13 @@ const RecentProject: React.FC = () => {
         modules={[Autoplay, Pagination, Navigation]}
         className="swiper"
       >
-        {SLIDES.map((slide) => (
-          <SwiperSlide className="swiper__slide">
+        {SLIDES.map((slide,idx) => (
+          <SwiperSlide key={idx} className="swiper__slide">
             <img src={slide.src} alt={slide.alt} />
-            <p className="swiper__text swiper__text_top-left">{slide.text}</p>
+            <div className={`swiper__text 
+            ${idx%2===0 ? 'swiper__text_top-right': "swiper__text_top-left"}`}>
+              <p className='swiper__text-item'>{slide.text}</p>  
+              <a href='/' className='swiper__text-link'>Подробнее &rarr;</a> </div>
           </SwiperSlide>
         ))}
       </Swiper>

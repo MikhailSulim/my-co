@@ -1,11 +1,15 @@
-import EmailIcon from '../Icons/EmailIcon';
-import InstagramIcon from '../Icons/InstagramIcon';
-import PhoneIcon from '../Icons/PhoneIcon';
-import PinterestIcon from '../Icons/PinterestIcon';
-import VKIcon from '../Icons/VKIcon';
+import React from 'react';
+
 import './Footer.scss';
 
-function Footer() {
+/**
+ * Description placeholder
+ *
+ *
+ * @returns {JSX.Element}
+ */
+
+const Footer: React.FC = (): JSX.Element => {
   return (
     <footer className="footer">
       <div className="footer__content">
@@ -22,29 +26,40 @@ function Footer() {
           <div className="footer__contacts">
             <p className="footer__to-us">Свяжитесь с нами</p>
             <div className="footer__contact">
-              <EmailIcon />
+              {/* <EmailIcon /> */}
+              <svg>
+                <use xlinkHref="sprite.svg#email" />
+              </svg>
               <span className="footer__contact-text">mail@mail.com</span>
             </div>
             <div className="footer__contact">
-              <PhoneIcon />
+              <svg>
+                <use xlinkHref="sprite.svg#phone" />
+              </svg>
               <span className="footer__contact-text">+7 495 1234567</span>
             </div>
           </div>
           <div className="footer__social-media">
             <a className="footer__link" href="http://instagram.com">
-              <InstagramIcon />
+              <svg>
+                <use xlinkHref="sprite.svg#instagram" />
+              </svg>
             </a>
             <a className="footer__link" href="http://vk.com">
-              <VKIcon />
+              <svg>
+                <use xlinkHref="sprite.svg#vk" />
+              </svg>
             </a>
             <a className="footer__link" href="http://pinterest.com">
-              <PinterestIcon />
+              <svg>
+                <use xlinkHref="sprite.svg#pinterest" />
+              </svg>
             </a>
           </div>
         </div>
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;
