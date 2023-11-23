@@ -4,6 +4,7 @@ import { useWindowWidth } from '../../hooks/useWindowWidth';
 
 import './Header.scss';
 import { MOBILE_SCREEN_WIDTH } from '../../utils/constants';
+import Drawer from '../Drawer/Drawer';
 
 /**
  * Description placeholder
@@ -15,6 +16,15 @@ const Header: React.FC = (): JSX.Element => {
   const [scrollPosition, setScrollPosition] = useState<number>(0);
   const [isShowBurgerMenu, setIsShowBurgerMenu] = useState<boolean>(false);
   const windowWidth = useWindowWidth();
+  const [isMobileMenuShow, setIsMobileMenuShow] = useState(false);
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuShow(false);
+  };
+
+  const openMobileMenu = () => {
+    setIsMobileMenuShow(true);
+  };
 
   useEffect(() => {
     windowWidth > MOBILE_SCREEN_WIDTH
@@ -40,6 +50,7 @@ const Header: React.FC = (): JSX.Element => {
     <header
       className={`${scrollPosition > 100 ? 'header header_scroled' : 'header'}`}
     >
+       {isMobileMenuShow && <Drawer onClose={closeMobileMenu} />}
       <div className="header__content">
         <div className="header__logo-container">
           <p className="header__logo">MY-CO</p>
@@ -52,7 +63,7 @@ const Header: React.FC = (): JSX.Element => {
         </div>
         {isShowBurgerMenu ? (
           // <button className="header__burger-menu-btn">&#9776;</button>
-          <button className="header__burger-menu-btn">
+          <button className="header__burger-menu-btn" onClick={openMobileMenu}>
             <svg>
               <use xlinkHref="sprite.svg#burger" />
             </svg>

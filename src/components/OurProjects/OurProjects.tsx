@@ -15,13 +15,12 @@ import './OurProjects.scss';
 
 const Animation = {
   hidden: (custom: number) => ({
-    x: custom * 300,
+    x: custom * 150,
     opacity: 0,
   }),
   visible: (custom: number) => ({
     x: 0,
     opacity: 1,
-   
   }),
 };
 
@@ -49,7 +48,6 @@ const OurProjects: React.FC = (): JSX.Element => {
             />
           );
         })}
-        ;
       </div>
     </section>
   );

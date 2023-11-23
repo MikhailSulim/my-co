@@ -21,3 +21,11 @@ main {
   flex-direction: column;
   width: 100%;
 }
+
+
+@media screen and (max-width: 768px) {
+  html {
+    :target {scroll-margin-top: 40px;}
+  }
+  
+}

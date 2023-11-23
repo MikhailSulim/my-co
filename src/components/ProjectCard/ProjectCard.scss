@@ -19,8 +19,8 @@
   }
 
   &__img {
-    min-width: 200px;
-    min-height: 100px;
+    min-width: 400px;
+    height: 300px;
     background-size: contain;
   }
 
@@ -104,9 +104,8 @@
    
   
     &__img {
-      // min-width: 450px;
-      // height: 300px;
-      // background-size: contain;
+      min-width: 200px;
+      height: auto;
     }
   
     &__text {

@@ -109,6 +109,11 @@
     padding: 20px 10px;
     box-sizing: border-box;
 
+    &_scroled {
+      padding: 8px 0;
+      background-color: $tickerBGColor;
+    }
+
     &__nav {
       gap: 15px;
     }
